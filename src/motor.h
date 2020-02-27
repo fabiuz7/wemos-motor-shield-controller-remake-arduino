@@ -73,6 +73,14 @@ public:
    */
   void brake();
 
+  /**
+   * Return true if contains a valid motor, false otherwise.
+   * i.e. the default constructor creates a not valid motor.
+   */
+  explicit operator bool() const {
+    return motorController != nullptr;
+  }
+
 private:
   uint8_t speed;
   Direction direction;
