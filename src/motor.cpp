@@ -86,7 +86,7 @@ void Motor::brake() {
   motorController->setMotor(this, MotorController::SHORT_BRAKE, 0);
 }
 
-Motor::Motor(MotorController* mc): motorController(mc) {};
+Motor::Motor(MotorController* mc): speed(0), direction(Direction::CW), braked(false), motorController(mc) {};
 
 void Motor::executeMovementCommand() {
   if(direction == Direction::CW) {

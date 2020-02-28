@@ -53,7 +53,7 @@ public:
 
   /**
    * Start motor with the previously specified speed and direction.
-   * NOTE: speed = 0 is equal to call stop().
+   * NOTE: speed = 0 is equivalent to call stop().
    */
   void setSpeedDirection(uint8_t speed, Direction direction);
 
